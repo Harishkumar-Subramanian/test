@@ -11,7 +11,7 @@
         {
             "customType": "regex",
             "fileMatch": ["^apps/.*/.*/values\\.yaml$"],
-            "matchStrings": ["^helm:\\n\\s*targetRevision: (?<currentValue>.*)$"],
+            "matchStrings": ["^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$"],
             "depNameTemplate": "helm/ttc-standard-app",
             "datasourceTemplate": "helm",
             "versioningTemplate": "semver"
