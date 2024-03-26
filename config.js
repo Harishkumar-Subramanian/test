@@ -3,7 +3,7 @@ module.exports = {
   packageRules: [
     {
       matchPackageNames: ['helm/ttc-standard-app'],
-      matchDatasources: ['helm']
+      matchDatasources: ['docker']
     }
   ],
   customManagers: [
@@ -12,7 +12,7 @@ module.exports = {
       fileMatch: ['^apps/.*/.*/values\\.yaml$'],
       matchStrings: ['^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$'],
       depNameTemplate: 'helm/ttc-standard-app',
-      datasourceTemplate: 'helm',
+      datasourceTemplate: 'docker',
       versioningTemplate: 'semver'
     }
   ],
