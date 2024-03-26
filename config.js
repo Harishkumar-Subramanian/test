@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['config:recommended'],
+  extends: ['config:base'],
   packageRules: [
     {
       matchPackageNames: ['helm/ttc-standard-app'],
