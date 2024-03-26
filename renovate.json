@@ -20,7 +20,7 @@
     {
       "hostType": "docker",
       "matchHost": "trimbletransportationcloud.azurecr.io",
-      "username": "{{ env.OCI_REGISTRY_USERNAME }}",
+      "username": "global-pull-token",
       "password": "{{ env.OCI_REGISTRY_PASSWORD }}"
     }
   ]
