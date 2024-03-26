@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '20'
       - name: Run Renovate
-        uses: docker://renovate/renovate:latest
+        uses: renovatebot/github-action@v40.1.6
         with:
-          args: --config-file config.js
+          configurationFile: config.js
+          token: ${{ secrets.TOKEN }}
