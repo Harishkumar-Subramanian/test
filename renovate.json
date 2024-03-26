@@ -15,6 +15,14 @@
       "packagePatterns": ["^helm$"],
       "registryUrls": ["https://trimbletransportationcloud.azurecr.io"]
     }
+  ],
+  "hostRules": [
+    {
+      "hostType": "docker",
+      "matchHost": "trimbletransportationcloud.azurecr.io",
+      "username": "{{ env.OCI_REGISTRY_USERNAME }}",
+      "password": "{{ env.OCI_REGISTRY_PASSWORD }}"
+    }
   ]
 }
 
