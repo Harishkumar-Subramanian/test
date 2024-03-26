@@ -1,1 +1,4 @@
-targetRevision: 2.9.10
+image:
+  repository: 'helm/ttc-standard-app'
+  tag: 2.9.10
+  registry: registry.example.com
