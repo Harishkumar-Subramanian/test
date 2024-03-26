@@ -3,18 +3,22 @@
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^apps/.*/.*/values\\.yaml$"],
-      "datasourceTemplate": "custom.helm",
+      "fileMatch": ["^values\\.yaml$"],
+      "matchStrings": ["targetRevision: (?<currentValue>.*?)\\n"],
       "depNameTemplate": "helm/ttc-standard-app",
-      "matchStrings": [
-        "^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "datasourceTemplate": "helm"
     }
   ],
-  "customDatasources": {
+  "datasources": {
     "helm": {
-      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud.azurecr.io"
+      "registryUrls": ["https://trimbletransportationcloud.azurecr.io"]
     }
-  }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["helm"],
+      "packagePatterns": ["^helm$"]
+    }
+  ]
 }
+
