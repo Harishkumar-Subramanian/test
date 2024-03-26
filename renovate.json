@@ -7,7 +7,7 @@
             "datasource": "helm"
         }
     ],
-    "matchDatasources": ["helm"]
+    "matchDatasources": ["helm"],
     "customManagers": [
         {
             "customType": "regex",
