@@ -9,15 +9,11 @@
       "datasourceTemplate": "helm"
     }
   ],
-  "datasources": {
-    "helm": {
-      "registryUrls": ["https://trimbletransportationcloud.azurecr.io"]
-    }
-  },
   "packageRules": [
     {
       "matchDatasources": ["helm"],
-      "packagePatterns": ["^helm$"]
+      "packagePatterns": ["^helm$"],
+      "registryUrls": ["https://trimbletransportationcloud.azurecr.io"]
     }
   ]
 }
