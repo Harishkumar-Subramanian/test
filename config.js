@@ -16,4 +16,5 @@ module.exports = {
           "versioningTemplate": "semver"
         }
     ]
+  "repositories": ["Harishkumar-Subramanian/test"]
 };
