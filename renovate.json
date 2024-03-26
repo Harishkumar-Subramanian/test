@@ -1,9 +1,7 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": ["config:base"],
-    "datasource": {
-        "helm": {
-          "registryUrls": ["https://trimbletransportationcloud.azurecr.io"]
-        }
-      }
+    "helm": {
+        "registryUrls": ["https://trimbletransportationcloud.azurecr.io"]
+    }
 }
