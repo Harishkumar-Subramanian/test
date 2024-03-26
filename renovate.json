@@ -4,10 +4,9 @@
     "packageRules": [
         {
             "packageNames": ["helm/ttc-standard-app"],
-            "datasource": "helm"
+            "matchDatasources": ["helm"]
         }
     ],
-    "matchDatasources": ["helm"],
     "customManagers": [
         {
             "customType": "regex",
