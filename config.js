@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['config:base'],
+  extends: ['config:recommended'],
   packageRules: [
     {
       matchPackageNames: ['helm/ttc-standard-app'],
@@ -16,5 +16,5 @@ module.exports = {
       versioningTemplate: 'semver'
     }
   ],
-  repositories: ['Harishkumar-Subramanian/tutorial']
+  repositories: ['Harishkumar-Subramanian/test']
 };
