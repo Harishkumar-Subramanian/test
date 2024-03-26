@@ -1,19 +1,19 @@
 module.exports = {
-  extends: ['config:base'],
-  packageRules: [
+  "extends": ["config:recommended"],
+  "packageRules": [
     {
-      packageNames: ['helm/ttc-standard-app'],
-      matchDatasources: ['helm']
+      "matchPackageNames": ["helm/ttc-standard-app"],
+      "matchDatasources": ["helm"]
     }
-  ],
-  customManagers: [
-    {
-      customType: 'regex',
-      fileMatch: ['^apps/.*/.*/values\\.yaml$'],
-      matchStrings: ['^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$'],
-      depNameTemplate: 'helm/ttc-standard-app',
-      datasourceTemplate: 'helm',
-      versioningTemplate: 'semver'
-    }
-  ]
+   ],
+   "customManagers": [
+      {
+          "customType": "regex",
+          "fileMatch": ["^apps/.*/.*/values\\.yaml$"],
+          "matchStrings": ["^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$"],
+          "depNameTemplate": "helm/ttc-standard-app",
+          "datasourceTemplate": "helm",
+          "versioningTemplate": "semver"
+        }
+    ]
 };
