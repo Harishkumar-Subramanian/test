@@ -1,26 +1,19 @@
 module.exports = {
-    hostRules: [
-      {
-        hostType: 'docker',
-        matchHost: 'https://trimbletransportationcloud.azurecr.io',
-        username: process.env.OCI_REGISTRY_USERNAME,
-        password: process.env.OCI_REGISTRY_PASSWORD,
-      },
-    ],
-    packageRules: [
-      {
-        matchDatasources: ['helm'],
-        registryUrls: ['oci://trimbletransportationcloud.azurecr.io'],
-        enabled: true
-      }
-    ],
-     customManagers: [
-       {
-         customType: 'regex',
-         fileMatch: ['^apps/.*/.*/values\\.yaml$'],
-         matchStrings: ['^helm:\\n\\s*targetRevision: (?<currentValue>.*)$'],
-         datasourceTemplate: 'helm',
-        }
-    ],
-    repositories: ['Harishkumar-Subramanian/test'],
-  };
+  extends: ['config:base'],
+  packageRules: [
+    {
+      packageNames: ['helm/ttc-standard-app'],
+      matchDatasources: ['helm']
+    }
+  ],
+  customManagers: [
+    {
+      customType: 'regex',
+      fileMatch: ['^apps/.*/.*/values\\.yaml$'],
+      matchStrings: ['^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$'],
+      depNameTemplate: 'helm/ttc-standard-app',
+      datasourceTemplate: 'helm',
+      versioningTemplate: 'semver'
+    }
+  ]
+};
