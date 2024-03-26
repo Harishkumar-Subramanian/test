@@ -1,3 +1,19 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^apps/.*/.*/values\\.yaml$"],
+      "datasourceTemplate": "custom.helm",
+      "matchStrings": [
+        "^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ],
+  "customDatasources": {
+    "helm": {
+      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud.azurecr.io"
+    }
+  }
 }
