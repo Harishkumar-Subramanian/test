@@ -13,7 +13,7 @@ module.exports = {
       matchStrings: ['^helm:\\s*targetRevision:\\s*(?<currentValue>.*)$'],
       depNameTemplate: 'helm/ttc-standard-app',
       datasourceTemplate: 'docker',
-      versioningTemplate: 'semver'
+      versioningTemplate: '^(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)$'
     }
   ],
   repositories: ['Harishkumar-Subramanian/test']
