@@ -11,10 +11,11 @@ module.exports = {
       currentValueTemplate: '{{version}}'
     }
   ],
-   customDatasources: {
-    helm: {
-      defaultRegistryUrlTemplate: 'https://trimbletransportationcloud/helm/ttc-standard-app'
-    }
+   packageRules: [
+  {
+        'matchDatasources': ['helm'],
+        'packagePatterns': ['helm/ttc-standard-app'],
+        'registryUrls': ['trimbletransportationcloud.azurecr.io']
   },
   hostRules: [
     {
