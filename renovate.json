@@ -19,7 +19,7 @@
     "hostRules": [
       {
         "hostType": "helm",
-        "matchHost": "trimbletransportationcloud.azurecr.io",
+        "matchHost": "https://trimbletransportationcloud/helm/ttc-standard-app",
         "username": "global-pull-token",
         "password": "{{ env.RENOVATE_AZURE_REGISTRY_PASSWORD }}"
       }
