@@ -14,7 +14,7 @@
   "packageRules": [
       {
         "matchDatasources": ["helm"],
-        "packagePatterns": ["^helm/ttc-standard-app$"],
+        "packagePatterns": ["helm/ttc-standard-app"],
         "registryUrls": ["https://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"]
       }
     ],
