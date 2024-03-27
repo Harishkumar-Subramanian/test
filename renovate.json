@@ -15,15 +15,7 @@
     "helm": {
       "defaultRegistryUrlTemplate": "https://trimbletransportationcloud/helm/ttc-standard-app"
     }
-  },
-    "hostRules": [
-      {
-        "hostType": "helm",
-        "matchHost": "https://trimbletransportationcloud/helm/ttc-standard-app",
-        "username": "global-pull-token",
-        "password": "{{ env.RENOVATE_AZURE_REGISTRY_PASSWORD }}"
-      }
-    ]
+  }
 }
 
 
