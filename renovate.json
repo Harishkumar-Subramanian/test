@@ -4,7 +4,7 @@
     {
       "customType": "regex",
       "fileMatch": ["values.yaml"],
-      "matchStrings": ["(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)"],
+      "matchStrings": ["2.9.10"],
       "depNameTemplate": "helm/ttc-standard-app",
       "versioningTemplate": "semver-coerced",
       "datasourceTemplate": "helm"
