@@ -13,7 +13,7 @@
   ],
    "customDatasources": {
     "helm": {
-      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud/ttc-standard-app"
+      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud/helm/ttc-standard-app"
     }
   },
     "hostRules": [
