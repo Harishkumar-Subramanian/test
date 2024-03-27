@@ -24,6 +24,5 @@ jobs:
           configurationFile: config.js
           token: ${{ secrets.TOKEN }}
         env:
-          LOG_LEVEL: debug
           OCI_REGISTRY_USERNAME: ${{ secrets.OCI_REGISTRY_USERNAME }}
           OCI_REGISTRY_PASSWORD: ${{ secrets.OCI_REGISTRY_PASSWORD }}
