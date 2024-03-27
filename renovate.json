@@ -1,5 +1,30 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["values.yaml"],
+      "matchStrings": ["(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)"],
+      "depNameTemplate": "helm/ttc-standard-app",
+      "versioningTemplate": "semver-coerced",
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+      {
+        "matchDatasources": ["docker"],
+        "packagePatterns": ["^helm/ttc-standard-app$"],
+        "registryUrls": ["trimbletransportationcloud.azurecr.io"]
+      }
+    ],
+    "hostRules": [
+      {
+        "hostType": "docker",
+        "matchHost": "trimbletransportationcloud.azurecr.io",
+        "username": "global-pull-token",
+        "password": "{{ env.RENOVATE_AZURE_REGISTRY_PASSWORD }}"
+      }
+    ]
 }
 
 
