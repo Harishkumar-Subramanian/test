@@ -7,17 +7,15 @@
       "matchStrings": ["(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)"],
       "depNameTemplate": "helm/ttc-standard-app",
       "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "helm",
+      "datasourceTemplate": "custom.helm",
       "currentValueTemplate": "{{version}}"
     }
   ],
-  "packageRules": [
-      {
-        "matchDatasources": ["helm"],
-        "packagePatterns": ["^helm/ttc-standard-app$"],
-        "registryUrls": ["oci://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"]
-      }
-    ],
+   "customDatasources": {
+    "helm": {
+      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"
+    }
+  },
     "hostRules": [
       {
         "hostType": "helm",
