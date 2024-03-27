@@ -13,7 +13,7 @@
   ],
    "customDatasources": {
     "helm": {
-      "defaultRegistryUrlTemplate": "oci://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"
+      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"
     }
   },
     "hostRules": [
