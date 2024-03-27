@@ -12,9 +12,7 @@
   ],
   "customDatasources": {
     "azure": {
-      "registryUrl": "https://trimbletransportationcloud.azurecr.io",
-      "username": "global-pull-token",
-      "passwordEnv": "RENOVATE_AZURE_REGISTRY_PASSWORD"
+      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app",
     }
   }
 }
