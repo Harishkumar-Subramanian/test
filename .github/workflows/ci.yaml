@@ -28,4 +28,4 @@ jobs:
         env:
           LOG_LEVEL: debug
           OCI_REGISTRY_USERNAME: ${{ secrets.OCI_REGISTRY_USERNAME }}
-          OCI_REGISTRY_PASSWORD: ${{ secrets.OCI_REGISTRY_PASSWORD }}
+          RENOVATE_AZURE_REGISTRY_PASSWORD: ${{ secrets.OCI_REGISTRY_PASSWORD }}

@@ -21,7 +21,7 @@ module.exports = {
       hostType: 'helm',
       matchHost: 'trimbletransportationcloud.azurecr.io',
       username: 'global-pull-token',
-      password: process.env.OCI_REGISTRY_PASSWORD
+      password: process.env.RENOVATE_AZURE_REGISTRY_PASSWORD
     }
   ]
 };
