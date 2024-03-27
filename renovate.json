@@ -13,7 +13,7 @@
   ],
    "customDatasources": {
     "helm": {
-      "defaultRegistryUrlTemplate": "https://portal.azure.com/#view/Microsoft_Azure_ContainerRegistries/RepositoryBlade/id/%2Fsubscriptions%2F6de0f912-f69f-48f5-9ef8-9c4b460ca91a%2FresourceGroups%2Fttc-global%2Fproviders%2FMicrosoft.ContainerRegistry%2Fregistries%2Ftrimbletransportationcloud/repository/helm%2Fttc-standard-app"
+      "defaultRegistryUrlTemplate": "https://trimbletransportationcloud/ttc-standard-app"
     }
   },
     "hostRules": [
