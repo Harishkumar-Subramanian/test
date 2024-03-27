@@ -3,7 +3,7 @@ cluster:
   namespace: devopssample
 image:
   repository: 'helm/ttc-standard-app'
-  targetRevision: 2.9.10
+  tag: 2.9.10
   registry: 'trimbletransportationcloud.azurecr.io'
 global:
   appName: tcx-devopssample
