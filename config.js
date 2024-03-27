@@ -11,12 +11,13 @@ module.exports = {
       currentValueTemplate: '{{version}}'
     }
   ],
-   packageRules: [
-  {
+  packageRules: [
+    {
         'matchDatasources': ['helm'],
         'packagePatterns': ['helm/ttc-standard-app'],
         'registryUrls': ['trimbletransportationcloud.azurecr.io']
-  },
+    }
+  ],
   hostRules: [
     {
       hostType: 'helm',
