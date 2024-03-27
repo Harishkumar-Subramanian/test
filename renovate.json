@@ -7,19 +7,19 @@
       "matchStrings": ["(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)"],
       "depNameTemplate": "helm/ttc-standard-app",
       "versioningTemplate": "semver-coerced",
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "helm"
     }
   ],
   "packageRules": [
       {
-        "matchDatasources": ["docker"],
+        "matchDatasources": ["helm"],
         "packagePatterns": ["^helm/ttc-standard-app$"],
         "registryUrls": ["trimbletransportationcloud.azurecr.io"]
       }
     ],
     "hostRules": [
       {
-        "hostType": "docker",
+        "hostType": "helm",
         "matchHost": "trimbletransportationcloud.azurecr.io",
         "username": "global-pull-token",
         "password": "{{ env.RENOVATE_AZURE_REGISTRY_PASSWORD }}"
