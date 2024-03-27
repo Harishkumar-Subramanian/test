@@ -15,7 +15,7 @@
       {
         "matchDatasources": ["helm"],
         "packagePatterns": ["^helm/ttc-standard-app$"],
-        "registryUrls": ["oci://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"]
+        "registryUrls": ["https://trimbletransportationcloud.azurecr.io/helm/ttc-standard-app"]
       }
     ],
     "hostRules": [
