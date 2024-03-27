@@ -1,4 +1,0 @@
-image:
-  repository: 'helm/ttc-standard-app'
-  tag: 2.9.10
-  registry: trimbletransportation.azurecr.io
