@@ -2,7 +2,9 @@ cluster:
   name: dev
   namespace: devopssample
 helm:
+  repository: 'helm/ttc-standard-app'
   targetRevision: 2.9.10
+  registry: 'trimbletransportationcloud.azurecr.io'
 global:
   appName: tcx-devopssample
   teamName: tcx-slipway
