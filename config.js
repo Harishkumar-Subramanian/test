@@ -7,7 +7,7 @@ module.exports = {
       matchStrings: ['(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)'],
       depNameTemplate: 'helm/ttc-standard-app',
       versioningTemplate: 'semver-coerced',
-      datasourceTemplate: 'custom.helm',
+      datasourceTemplate: 'helm',
       currentValueTemplate: '{{version}}'
     }
   ],
