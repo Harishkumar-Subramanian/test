@@ -15,13 +15,13 @@
       {
         "matchDatasources": ["helm"],
         "packagePatterns": ["helm/ttc-standard-app"],
-        "registryUrls": ["tcxcontainers.azurecr.io/helm/ttc-standard-app"]
+        "registryUrls": ["https://tcxcontainers.azurecr.io/helm/ttc-standard-app"]
       }
     ],
     "hostRules": [
       {
         "hostType": "helm",
-        "matchHost": "tcxcontainers.azurecr.io",
+        "matchHost": "https://tcxcontainers.azurecr.io/helm/ttc-standard-app",
         "username": "c5db4df2-bd84-4606-b590-e6873154cd17",
         "password": "{{ env.RENOVATE_AZURE_REGISTRY_PASSWORD }}"
       }
