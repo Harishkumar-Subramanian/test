@@ -1,4 +1,0 @@
-image:
-  repository: packages/helm/istio-official/istiod
-  tag: 1.16.0
-  registry: artifacthub.io
