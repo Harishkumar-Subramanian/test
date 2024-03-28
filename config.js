@@ -18,7 +18,7 @@ module.exports = {
       matchPackageNames: ['helm/ttc-standard-app'],
       versioning: 'semver--coerced'
     }
-  ]
+  ],
   hostRules: [
     {
       matchHost: 'https://tcxcontainers.azurecr.io/helm/v1/repo/helm/ttc-standard-app',
