@@ -1,4 +1,4 @@
 image:
   repository: istio-official/istiod
-  targetRevision: 2.9.10
+  tag: 1.16.0
   registry: artifacthub.io
