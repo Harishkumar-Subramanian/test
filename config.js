@@ -11,13 +11,6 @@ module.exports = {
       currentValueTemplate: '{{version}}'
     }
   ],
-  packageRules: [
-    {
-        'matchDatasources': ['helm'],
-        'packagePatterns': ['helm/ttc-standard-app'],
-        'registryUrls': ['https://tcxcontainers.azurecr.io/helm/ttc-standard-app']
-    }
-  ],
   hostRules: [
     {
       hostType: 'docker',
