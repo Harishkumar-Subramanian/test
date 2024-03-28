@@ -12,13 +12,9 @@ module.exports = {
       currentValueTemplate: '{{version}}'
     }
   ],
-  packageRules: [
-    {
-        'matchDatasources': ['helm'],
-        'packagePatterns': ['^@helm/ttc-standard-app'],
-        'registryUrls': ['https://trimbletransportationcloud.azurecr.io/helm/v1/repo']
-    }
-  ],
+  registryAliases: {
+    stable: "https://tcxcontainers.azurecr.io/helm/v1/repo"
+  },
   hostRules: [
     {
       matchHost: 'https://tcxcontainers.azurecr.io/helm/v1/repo',
