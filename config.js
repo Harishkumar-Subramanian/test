@@ -12,13 +12,16 @@ module.exports = {
       currentValueTemplate: '{{version}}'
     }
   ],
-  registryAliases: {
-    stable: 'https://tcxcontainers.azurecr.io/helm/ttc-standard-app'
-  },
+  packageRules: [
+    {
+        'matchDatasources': ['helm'],
+        'packagePatterns': ['^@helm/ttc-standard-app'],
+        'registryUrls': ['https://trimbletransportationcloud.azurecr.io']
+    }
+  ],
   hostRules: [
     {
-      matchHost: 'https://tcxcontainers.azurecr.io/helm/ttc-standard-app',
-      hostType: 'docker',
+      matchHost: 'https://tcxcontainers.azurecr.io',
       username: 'tcxcontainers',
       password: process.env.RENOVATE_AZURE_REGISTRY_PASSWORD
     }
