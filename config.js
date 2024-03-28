@@ -13,17 +13,10 @@ module.exports = {
   ],
   packageRules: [
     {
-        'matchDatasources': ['docker'],
-        'packagePatterns': ['helm/ttc-standard-app'],
-        'registryUrls': ['https://tcxcontainers.azurecr.io/helm/ttc-standard-app']
-    }
-  ],
-  hostRules: [
-    {
-      hostType: 'docker',
-      matchHost: 'https://tcxcontainers.azurecr.io/helm/ttc-standard-app',
-      username: 'c5db4df2-bd84-4606-b590-e6873154cd17',
-      password: process.env.RENOVATE_AZURE_REGISTRY_PASSWORD
+      packagePatterns: ['helm:'],
+      datasource: 'helm',
+      registryUrls: ['https://tcxcontainers.azurecr.io/helm/ttc-standard-app'],
+      versioning: 'semver-coerced'
     }
   ]
 };
