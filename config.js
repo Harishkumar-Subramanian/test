@@ -8,10 +8,17 @@ module.exports = {
       depNameTemplate: 'helm/ttc-standard-app',
       registryUrlTemplate: 'https://tcxcontainers.azurecr.io/helm/v1/repo/helm/ttc-standard-app',
       versioningTemplate: 'semver-coerced',
-      datasourceTemplate: 'helm',
+      datasourceTemplate: 'docker',
       currentValueTemplate: '{{version}}'
     }
   ],
+  packageRules: [
+    {
+      matchDatasources: ['docker'],
+      matchPackageNames: ['helm/ttc-standard-app'],
+      versioning: 'semver--coerced'
+    }
+  ]
   hostRules: [
     {
       matchHost: 'https://tcxcontainers.azurecr.io/helm/v1/repo/helm/ttc-standard-app',
