@@ -1,4 +1,4 @@
-helm:
-  repository: helm/ttc-standard-chart
+image:
+  repository: istio-official/istiod
   targetRevision: 2.9.10
-  registry: trimbletransportationcloud.azurecr.io
+  registry: artifacthub.io
