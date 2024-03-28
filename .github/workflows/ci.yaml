@@ -29,3 +29,4 @@ jobs:
           LOG_LEVEL: debug
           OCI_REGISTRY_USERNAME: ${{ secrets.OCI_REGISTRY_USERNAME }}
           RENOVATE_AZURE_REGISTRY_PASSWORD: ${{ secrets.OCI_REGISTRY_PASSWORD }}
+      - run: cat config.js
