@@ -5,7 +5,7 @@ module.exports = {
       customType: 'regex',
       fileMatch: ['values.yaml'],
       matchStrings: ['(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)'],
-      depNameTemplate: 'tcxcontainers.azurecr.io',
+      depNameTemplate: 'helm/ttc-standard-app',
       registryUrlTemplate: 'https://tcxcontainers.azurecr.io/helm/v1/repo',
       versioningTemplate: 'semver-coerced',
       datasourceTemplate: 'helm',
