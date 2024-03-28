@@ -1,0 +1,4 @@
+helm:
+  repository: helm/ttc-standard-chart
+  targetRevision: 2.9.10
+  registry: trimbletransportationcloud.azurecr.io
