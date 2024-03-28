@@ -6,7 +6,7 @@ module.exports = {
       fileMatch: ['values.yaml'],
       matchStrings: ['(?<currentValue>helm:\\s*targetRevision:\\s*)(?<version>\\S+)'],
       depNameTemplate: 'helm/ttc-standard-app',
-      registryUrlTemplate: 'https://tcxcontainers.azurecr.io',
+      registryUrlTemplate: 'https://trimbletransportationcloud.azurecr.io',
       versioningTemplate: 'semver-coerced',
       datasourceTemplate: 'docker',
       currentValueTemplate: '{{version}}'
@@ -21,8 +21,8 @@ module.exports = {
   ],
   hostRules: [
     {
-      matchHost: 'https://tcxcontainers.azurecr.io',
-      username: 'tcxcontainers',
+      matchHost: 'https://trimbletransportationcloud.azurecr.io',
+      username: process.env.RENOVATE_AZURE_REGISTRY_USERNAME,
       password: process.env.RENOVATE_AZURE_REGISTRY_PASSWORD
     }
   ]
