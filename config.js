@@ -15,7 +15,7 @@ module.exports = {
     {
       packagePatterns: ['helm:'],
       datasource: 'helm',
-      registryUrls: ['https://tcxcontainers.azurecr.io/helm/ttc-standard-app'],
+      registryUrls: ['https://tcxcontainers.azurecr.io'],
       versioning: 'semver-coerced'
     }
   ]
