@@ -15,14 +15,14 @@ module.exports = {
     {
         'matchDatasources': ['helm'],
         'packagePatterns': ['helm/ttc-standard-app'],
-        'registryUrls': ['trimbletransportationcloud.azurecr.io']
+        'registryUrls': ['tcxcontainers.azurecr.io']
     }
   ],
   hostRules: [
     {
       hostType: 'helm',
-      matchHost: 'trimbletransportationcloud.azurecr.io',
-      username: 'global-pull-token',
+      matchHost: 'tcxcontainers.azurecr.io',
+      username: 'c5db4df2-bd84-4606-b590-e6873154cd17',
       password: process.env.RENOVATE_AZURE_REGISTRY_PASSWORD
     }
   ]
