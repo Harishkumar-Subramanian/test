@@ -25,6 +25,7 @@ jobs:
         with:
           app-id: 865245
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: 'Harishkumar-Subramanian'
       - name: Run Renovate
         uses: renovatebot/github-action@v40.1.7
         with:
