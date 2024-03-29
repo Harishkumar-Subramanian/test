@@ -2,7 +2,7 @@ cluster:
   name: dev
   namespace: devopssample
 helm:
-  targetRevision: 2.9.9
+  targetRevision: 2.10.0
 global:
   appName: tcx-devopssample
   teamName: tcx-slipway
