@@ -23,7 +23,7 @@ jobs:
         id: github_app_token
         uses: "actions/create-github-app-token@v1"
         with:
-          app-id: 401207
+          app-id: 865245
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
       - name: Run Renovate
         uses: renovatebot/github-action@v40.1.7
